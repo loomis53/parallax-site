@@ -1,0 +1,47 @@
+/* Filterable works Stylesheet */
+ul { list-style: none; }
+.master-base{
+	width:100% !important;
+}
+
+/* Custom Classes
+------------------------------------------------------------ */
+.group:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
+* html .group { zoom: 1; } /* IE6 */
+*:first-child+html .group { zoom: 1; } /* IE7 */
+
+
+
+.demo-top { margin-bottom: 0.35714em; padding-bottom: 0.5em; border-bottom: 3px solid #000; }
+.credits { font-size: 1.28571em; line-height: 1.16667em; text-align: center; color: #444; margin-bottom: 2.66667em; }
+.back-to-post { border-top: 1px solid #000; margin-bottom: 3em; }
+
+
+/* Filter */
+.filter{
+	margin-left:0px !important;
+	margin-right:30px !important;
+	padding-left:0px !important;
+}
+.filter li { float: left;
+font-size:18px;
+line-height:32px;
+color:#fff !important; }
+.filter li:after { content: "/"; color:#999; }
+.filter li:last-child:after { content: ""; }
+.filter a { padding: 0 10px; color:#222; text-decoration: none;
+
+font-family:"liberation_Sans";text-transform:uppercase; }
+
+
+/* works Items */
+.works{
+	margin:0px !important;
+}
+.works li { float: left;  -moz-box-shadow: 0 5px 5px -3px #222; -webkit-box-shadow: 0 5px 5px -3px #222;/* box-shadow: 0 5px 5px -3px #222;*/ }
+.works li:nth-child(4n) { margin-right: 0; }
+.works a { display: block;  text-decoration: none;}
+.works a:hover { display: block;  text-decoration: }
+.works img { width: 211px; height: 180px; display: block;  }
+
+
