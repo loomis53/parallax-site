@@ -35,7 +35,7 @@ $( function()
           $( '#styleselector_css' ).attr('href', 'assets/css/' + color + '.css');
         }
       } );
-    
+  
     //parallax
     $( window ).scroll( function()
     {
