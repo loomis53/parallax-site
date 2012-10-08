@@ -1,7 +1,6 @@
 {
-    "name": "bsi.io"
+    "name": "bsisite"
   , "version": "0.0.1"
-  , "homepage": "http://bsisite.herokuapp.com"
   , "node": "0.8.1"
   , "dependencies": {
       "express": ""
@@ -10,7 +9,7 @@
       "jaded": "*"
   }
   , "scripts": {
-      "build": "jaded -a -i views -o assets/templates"
+      "build": "jaded -a -i views -o public/templates"
   },
   "engines": {
     "node": "0.8.x",
