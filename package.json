@@ -4,6 +4,12 @@
   , "node": "0.8.1"
   , "dependencies": {
       "express": ""
+  }
+  , "devDependencies": {
+      "jaded": "*"
+  }
+  , "scripts": {
+      "build": "jaded -a -i views -o public/templates"
   },
   "engines": {
     "node": "0.8.x",
