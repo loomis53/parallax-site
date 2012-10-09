@@ -152,6 +152,9 @@
   .span1 {
     width: 70px;
   }
+  .spanvideo{
+	width: 560px;
+}
   .offset12 {
     margin-left: 1230px;
   }
