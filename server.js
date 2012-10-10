@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();    
 
+var http=require('http'), simplexml=require('xml-simple'), config= {host:'v01c3.com', path:'/rss', port:80}, body='';
+
 app.configure(function () {
   app.use(express.bodyParser());
   app.use(express['static'](__dirname));
@@ -8,6 +10,7 @@ app.configure(function () {
     showStack: true,
     dumpExceptions: true
   }));
+  app.set('view engine', 'ejs');
 });
 
 // //setup the errors
@@ -21,17 +24,35 @@ app.configure(function () {
 
 
 app.get('/', function(req, res){
-    res.sendfile(__dirname + '/index.htm');
+
+  http.get( config, function( fetch ) {
+    fetch.addListener('end', function() {
+      simplexml.parse(body, function(e, parsed) {
+
+        // res.sendfile(__dirname + '/index.htm');
+        res.render('index', { items: parsed.channel.item })
+      
+      });
+    });
+    fetch.setEncoding('utf8');
+    fetch.on('data', function(d) {
+      body+=d;
+    });
+  });
+
+
+
+    
 });
 
 
-app.get('/help', function(req, res){
-    res.sendfile('help.html');
-});
+// app.get('/help', function(req, res){
+//     res.sendfile('help.html');
+// });
 
-app.get('/about', function(req, res){
-    res.sendfile(__dirname + '/about.html');
-});
+// app.get('/about', function(req, res){
+//     res.sendfile(__dirname + '/about.html');
+// });
 
 
 

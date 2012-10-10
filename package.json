@@ -4,6 +4,9 @@
   , "node": "0.8.1"
   , "dependencies": {
       "express": ""
+  ,   "xml-simple": ""
+  ,   "ejs": ""
+
   }
   , "devDependencies": {
       "jaded": "*"

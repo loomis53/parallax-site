@@ -433,7 +433,7 @@
     <section id="blog" class="container-fluid section">
       <div class="container page">
       	<article class="row align-center">
-      	<h1 class="span12 promo-subheading pad-top-large align-center pad-bottom color-high text-shadow-off border-bottom"><span class="promo-subheading-alt color-dark highlight">Blog</span> Welcome to POMA::Lab</h1>
+      	<h1 class="span12 promo-subheading pad-top-large align-center pad-bottom color-high text-shadow-off border-bottom"><span class="promo-subheading-alt color-dark highlight">Blog:</span> welcome to POMA::Lab</h1>
         </article>
 		
 		<article class="row add-top">
@@ -477,52 +477,31 @@
         <div class="row border-bottom">
                 <div class="span8">
                 	
-                    
-                    <div class="post add-top">
-                        <h2 class="text-shadow-off common-subheading color-dark">Magnes theme rocks on themeforest</h2>
+                    <% for (var i = 0; i < 3; i++) { %>
+                      <div class="post add-top">
+                        <h2 class="text-shadow-off common-subheading color-dark"><%= items[i].title %> </h2>
                        
-                        <div class="post-img">
-                        	<img class="thumbnail" src="assets/images/features/01.png"  alt="magnes" title="magnes by designova"/>
+<!--                         <div class="post-img">
+                          <img class="thumbnail" src="assets/images/features/01.png"  alt="magnes" title="magnes by designova"/>
                         </div> 
-                        <div class="post-info pad-top-half text-shadow-off color-dark border-bottom">
-                            <div class="add-right-half"><h4 class="text-shadow-off tiny-subheading color-dark">July 08, 2012</h4></div>
-                            <div class="add-right-half add-top-half blog-label">Admin</div>
+ -->                        <div class="post-info pad-top-half text-shadow-off color-dark border-bottom">
+                            <div class="add-right-half"><h4 class="text-shadow-off tiny-subheading color-dark"><%= items[i].pubDate %></h4></div>
+<!--                             <div class="add-right-half add-top-half blog-label">Admin</div>
                             <div class="add-right-half add-top-half blog-label">Design, Creativity, Arts, Tech</div>
                             <div class="add-right-half add-top-half blog-label">32 Comments</div>
+ -->
+                         </div>
+                        <div class="text-shadow-off border-bottom pad-top-half">
+                          <%- items[i].description %>
                         </div>
-                        <p class="text-shadow-off border-bottom pad-top-half">In arcu. Curabitur accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nullam elementum purus sed orci vulputate feugiat. Etiam justo augue, hendrerit vel, pharetra eu, fermentum at, nunc. Suspendisse potenti. Morbi non risus. Integer rhoncus cursus sem.</p>
-                       <a class="btn btn-magnes add-top-half add-bottom">Learn More</a>
+                       <a class="btn btn-magnes add-top-half add-bottom" href="<%= items[i].link %>">Learn More</a>
                     </div>
-                    <!--post-->
-                    
-                   <div class="post add-top">
-                        <h2 class="text-shadow-off common-subheading color-dark">Designova turns to be popular author</h2>
-                       
-                        <div class="post-img">
-                        	<img class="thumbnail" src="assets/images/features/02.png"  alt="magnes" title="magnes by designova"/>
-                        </div> 
-                        <div class="post-info pad-top-half text-shadow-off color-dark border-bottom">
-                            <div class="add-right-half"><h4 class="text-shadow-off tiny-subheading color-dark">Oct 19, 2012</h4></div>
-                            <div class="add-right-half add-top-half blog-label">Admin</div>
-                            <div class="add-right-half add-top-half blog-label">Sales, Production, Stats, Market</div>
-                            <div class="add-right-half add-top-half blog-label">12 Comments</div>
-                        </div>
-                        <p class="text-shadow-off border-bottom pad-top-half">In arcu. Curabitur accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nullam elementum purus sed orci vulputate feugiat. Etiam justo augue, hendrerit vel, pharetra eu, fermentum at, nunc. Suspendisse potenti. Morbi non risus. Integer rhoncus cursus sem.</p>
-                       <a class="btn btn-magnes add-top-half add-bottom">Learn More</a>
-                    </div>
-                    
-                    <div class="pagination text-shadow-off">
-                        <ul>
-                            <li><a href="#"><i class="icon-caret-left"></i> Prev</a></li>
-                            <li class="active">
-                            	<a href="#">1</a>
-                            </li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">Next <i class="icon-caret-right"></i></a></li>
-                        </ul>
-                    </div><!--pagination-->
+
+                    <% } %>
+
+
+                    <a href="http://v01c3.com">Read More Posts</a>
+
                     
                 </div><!--span9-->
                 
