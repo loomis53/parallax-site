@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();    
 
-var http=require('http'), simplexml=require('xml-simple'), config= {host:'v01c3.com', path:'/rss', port:80}, body='';
+var http=require('http'), simplexml=require('xml-simple'), config= {host:'enr.construction.com', path:'/news/rss/enr.xml', port:80}, body='';
 
 app.configure(function () {
   app.use(express.bodyParser());
