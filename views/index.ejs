@@ -349,7 +349,10 @@
         <div class="row border-bottom">
                 <div class="span12">
                 	
-                    <% for (var i = 0; i < 3; i++) { %>
+                  <% if (items && items.length > 0) { %>
+                    <% var posts = items.length %>
+                    <% if(posts > 3) {posts = 3} %>
+                    <% for (var i = 0; i < posts; i++) { %>
                       <div class="post add-top">
                         <h2 class="text-shadow-off common-subheading color-dark"><%= items[i].title %> </h2>
                        
@@ -371,8 +374,9 @@
 
                     <% } %>
 
+                  <% } %>
 
-                    <a href="http://v01c3.com">Read More Posts</a>
+                    <a href="http://blog.bsi.io">Read More Posts</a>
 
                     
                 </div><!--span9-->
