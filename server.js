@@ -87,7 +87,7 @@ app.get('/shorten', function(req, res){
       res.send('Link Not Saved :(');
     } else {
       console.log("Link saved");
-      res.send('<a href="http://bsi.io/' + shortcode + '">http://bsi.io/' + shortcode + '</a>');
+      res.send('http://bsi.io/' + shortcode + ' <a href="http://bsi.io/' + shortcode + '" target="_new">(open)</a>');
     }
 
   });  
