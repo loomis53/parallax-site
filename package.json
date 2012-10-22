@@ -6,6 +6,7 @@
       "express": ""
   ,   "xml-simple": ""
   ,   "ejs": ""
+  ,   "mongojs": "0.4.x"
 
   }
   , "devDependencies": {

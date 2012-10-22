@@ -1,6 +1,12 @@
 var express = require("express");
 var app = express();    
 
+var databaseUrl = "mongodb://bsiio:bsiio@alex.mongohq.com:10069/bsiio"; //Example using MongoHQ: [USER]:[PASSWORD]@staff.mongohq.com:[PORT]/[APP]
+var collections = ['links'];
+var db = require("mongojs").connect(databaseUrl,collections);
+
+var keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
 // var http=require('http'), simplexml=require('xml-simple'), config= {host:'enr.construction.com', path:'/news/rss/enr.xml', port:80}, body='';
 var http=require('http'), simplexml=require('xml-simple'), config= {host:'feeds.feedburner.com', path:'/bsi/gVfl', port:80}, body='';
 // var http=require('http'), simplexml=require('xml-simple'), config= {host:'blog.bsi.io', path:'/rss', port:80}, body='';
@@ -27,30 +33,6 @@ app.configure(function () {
 
 app.get('/', function(req, res){
 
-  // http.get( config, function( fetch ) {
-  //   fetch.addListener('end', function() {
-  //     simplexml.parse(body, function(e, parsed) {
-
-  //       if(e){
-  //         console.log("error");
-  //         // res.render('index', { items: [] });
-  //       } else {
-
-  //         // res.sendfile(__dirname + '/index.htm');
-  //         res.render('index', { items: parsed.channel.item });
-  //       }
-      
-  //     });
-  //   });
-  //   fetch.setEncoding('utf8');
-  //   fetch.on('data', function(d) {
-  //     body+=d;
-  //   });
-  // }).on('error', function(e) {
-  //   console.log("Got error: " + e.message);
-  //   res.render('index', { items: [] });
-  // });
-
   var items = [];
   var body = "";
 
@@ -62,23 +44,12 @@ app.get('/', function(req, res){
       body+=chunk;
     });
     fetch.on("end", function() {
-      // console.log("END");
       simplexml.parse(body, function(e, parsed) {
-      if(e){
-        console.log("error");
-        // res.render('index', { items: items });
-      } else {
-        // console.log(parsed.channel.item[0].pubDate);
-        // console.log(parsed.channel.item[0].title);
-        // console.log(parsed.channel.item[0].description);
-        // console.log(JSON.stringify(parsed));
-
-        // console.log(parsed.channel.item);
-        items.push(parsed.channel.item)
-        // res.render('index', { items: parsed.channel.item });
-
-      }
-
+        if(e){
+          console.log("error");
+        } else {
+          items.push(parsed.channel.item)
+        }
 
       });
         res.render('index', { items: items });
@@ -93,9 +64,66 @@ app.get('/', function(req, res){
     
 });
 
+app.get('/link', function(req, res){
+  res.render('link');
+});
+
+app.get('/shorten', function(req, res){
+
+  var url = req.query.q;
+
+  // If the URL doesn't start with http, add it.
+  if (url.search(/^http/) == -1) {
+      url = 'http://' + url;
+  }
+
+  var shortcode = makeid(url);
+
+
+  db.links.save({shortcode: shortcode, url: url}, function(err, saved) {
+
+    if( err || !saved ) {
+      console.log("Link not saved");
+      res.send('Link Not Saved :(');
+    } else {
+      console.log("Link saved");
+      res.send('<a href="http://bsi.io/' + shortcode + '">http://bsi.io/' + shortcode + '</a>');
+    }
+
+  });  
+
+});
+
+app.get('/:link', function(req, res){
+
+
+  db.links.find({shortcode: req.params.link}, function(err, links) {
+    
+    if( err || !links.length) {
+      res.render('link');
+    } else {
+      res.redirect(links[0].url);
+    }
+
+  });  
+
+});
+
 
 app.listen(process.env.PORT || 3000);
 console.log('starting server on port 3000');
+
+// Link shortener logic
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
 
 
 // //The 404 Route (ALWAYS Keep this as the last route)
