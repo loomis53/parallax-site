@@ -68,6 +68,10 @@ app.get('/link', function(req, res){
   res.render('link');
 });
 
+app.get('/apps/demo', function(req, res){
+  res.render(__dirname + 'apps/demo/index.html');
+});
+
 app.get('/shorten', function(req, res){
 
   var url = req.query.q;
