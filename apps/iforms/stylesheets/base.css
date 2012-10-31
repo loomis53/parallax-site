@@ -163,7 +163,7 @@ section { }
 	section #app_info {
 		float: left;
 		width: 375px;
-		margin-top: 50px;
+		margin-top: 0px;
 		text-align: right;
 		padding-right: 50px;
 	}
