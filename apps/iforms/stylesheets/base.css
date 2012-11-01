@@ -307,6 +307,17 @@ div#slider {
 			div.slide .ipad-white img,
 			div.slide .ipad-white iframe { width: 352px; height: 468px; top: 49px; left: 129px; }
 		div.slide .ipad-white {	background: url('../images/devices/ipad-white.png') no-repeat; }
+		/* iMac/Web */
+		div.slide .imac{
+			width: 621px;
+			height: 491px;
+			top: 0;
+			left: 0;
+			background: url('../images/devices/iMac27.png') no-repeat;
+		}
+			div.slide .imac img,
+			div.slide .imac iframe { width: 570px; height: 284px; top: 22px; left: 25px; }
+
 /* Slider Navigation */
 div.echo-nav {
 	position: absolute;
