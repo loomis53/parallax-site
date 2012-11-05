@@ -1,0 +1,11 @@
+In order to spin up a new Products page all you need to do is:
+
+1) Put a directory with the App Name under the apps directory
+2) Drop in a favicon.png that is the standard 16px x 16px
+3) Drop in the Product logo and call it logo.png.  make sure it's 512px x 512px
+4) Create a text file called 'descriptions.txt' and put the app description there. Only use the <br> tags to indicate an additional line break
+5) Create a text file called 'title.txt' and put the App Title there. One line only.
+6) Create a folder called "screenshots" and place your product screenshots there.
+ 			for Web: 570px x 357px
+			for iPhone: 391px x 512px
+			for iPad: 391px x 512px

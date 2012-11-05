@@ -1,0 +1,4 @@
+Do you have a need for a form that you can use on your iOS device to collect data and submit it to a database? If so, iForms is your answer! With iForms, users can define their own forms using common interface tools like text boxes, date pickers, picklists, etc. and quickly deploy them to an iOS device.
+<br><br>
+Users can then fill out new instances of these forms, either online or offline, and submit the completed forms to either eForms, a database, or a third party web service configured to receive iForms data. Users can now retrieve and edit previously submitted forms.
+

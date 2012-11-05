@@ -1,0 +1,104 @@
+@charset "utf-8";
+.plan-container {
+    float: left;
+    margin-bottom: 2em;
+    position: relative;
+}
+.plan {
+    border-radius: 4px 4px 4px 4px;
+    margin-right: 6px;
+}
+.plan-header {
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.plan-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px 4px 0 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 10px 0;
+}
+.plan-price {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 66px;
+    line-height: 0.8em;
+    padding: 20px 0 10px;
+}
+.plan-price span.term {
+    display: block;
+    font-size: 13px;
+    line-height: 0;
+    margin-bottom: 0;
+    padding: 2em 0 1em;
+}
+.plan-price span.note {
+    display: inline;
+    font-size: 17px;
+    line-height: 0.8em;
+    position: relative;
+    top: -40px;
+}
+
+.plan-features {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #DDDDDD #DDDDDD -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+}
+.plan-features {
+    padding-bottom: 1em;
+}
+.plan-features ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.plan-features li {
+    border-bottom: 1px solid #CCCCCC;
+    margin: 0 2em;
+    padding: 1em 0;
+    text-align: center;
+	color:#222;
+	text-shadow:none;
+}
+.plan-features li:last-child {
+    border-bottom: medium none;
+}
+.plan-actions {
+    background: -moz-linear-gradient(center top , #F8F8F8, #E6E6E6) repeat-x scroll 0 0 whiteSmoke;
+    border: 1px solid #DDDDDD;
+    padding: 1.15em 0;
+}
+.plan-actions .btn {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 2em;
+    padding: 1em 0;
+}
+.pricing-plans.plans-1 .plan-container {
+    width: 100%;
+}
+.pricing-plans.plans-2 .plan-container {
+    width: 50%;
+}
+.pricing-plans.plans-3 .plan-container {
+    width: 33.33%;
+}
+.pricing-plans.plans-4 .plan-container {
+    width: 25%;
+}
+.pricing-plans .plan-container {
+    margin-bottom: 2em;
+    width: 50% !important;
+}
+.pricing-plans .plan-container {
+    margin-bottom: 2em;
+    width: 100% !important;
+}/* CSS Document */
+
