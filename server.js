@@ -68,9 +68,6 @@ app.get('/link', function(req, res){
   res.render('link');
 });
 
-app.get('/apps/iforms', function(req, res){
-  res.render(__dirname + 'apps/demo/index.html');
-});
 
 app.get('/shorten', function(req, res){
 

@@ -2,6 +2,8 @@
 ul { list-style: none; }
 .master-base{
 	width:100% !important;
+	height:100% !important;
+	background:url(../images/zoom.png);
 }
 
 /* Custom Classes
@@ -42,6 +44,6 @@ font-family:"liberation_Sans";text-transform:uppercase; }
 .works li:nth-child(4n) { margin-right: 0; }
 .works a { display: block;  text-decoration: none;}
 .works a:hover { display: block;  text-decoration: }
-.works img { width: 211px; height: 180px; display: block;  }
+.works img { width: 80px; height: 80px; display: block; }
 
 

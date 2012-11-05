@@ -62,19 +62,21 @@
            <!-- <article class="row border-top border-bottom"> -->
           <article class="row">
             <br />
-            <p class="promo-info span10 offset1 add-top-half">Welcome to BSI, Bechtel's technology innovation center! We are laser-focused on delivering world-class EPC solutions and services including: APIs, mobile/web/voice apps, cloud services, sensors, and realtime communications.</p>
+            <p class="promo-info span10 offset1 add-top-half">Welcome to Bechtel Software, Inc! Bechtel's technology innovation center where we are laser-focused on delivering world-class EPC solutions and services including: APIs, mobile/web/voice apps, cloud services, sensors, and realtime communications.</p>
             </article>
 
             
          </article>
 
-
+<!--
 			<article class="row align-center pad-top-extra-large-plus align-center">
 				<div class="spanvideo pad-left-extra-extra-large align-center" id="videobutton">
           <img src="assets/images/pomavideo.jpg">
 				</div>
 			</article>
-         
+--> 
+
+        
       </div>
     </section>
 	<nav class="promo-social pad-top-medium align-center pad-bottom-medium">
@@ -130,6 +132,12 @@
 
             
         </article>
+
+			<article class="row align-center pad-top-extra-large-plus align-center">
+				<div class="spanvideo pad-left-extra-extra-large align-center" id="videobutton">
+        <img src="assets/images/pomavideo.jpg">
+				</div>
+			</article>
 
        
         
@@ -224,31 +232,32 @@
 <div class="span12 features-list">
     <div id="myCarousel" class="carousel slide">
     <!-- Carousel items -->
-    <div class="carousel-inner">
+  <div class="carousel-inner">
     
     <div class="active item">
-    	<img src="assets/images/features/01.png" alt="POMA iOS Apps" title="POMA iOS Apps"/>
-        <div class="carousel-caption">
-          <h4>Native iOS Apps</h4>
-          <p>Two dozen plus iPhone and iPad apps deployed in the field and saving our partners millions of dollars while accelerating timelines!</p>
-        </div>
+		<h2 class="promo-smallheading add-top align-center pad-bottom color-high text-shadow-off" id="popular_appsbutton"><a href="#">Most Popular!</a></h2>
+		<iframe src="popular.html" height="200" width="100%" frameborder="0" scrolling="no"></iframe>
     </div>
+
+
+
     <div class="item">
-    	<img src="assets/images/features/02.png" alt="POMA Android Apps" title="POMA Android Apps"/>
-        <div class="carousel-caption">
-          <h4>Native Android Apps</h4>
-          <p>Any where - Any time - Any device.  Welcome to our world.</p>
-        </div>
+		<h2 class="promo-smallheading add-top align-center pad-bottom color-high text-shadow-off" id="new_appsbutton"><a href="#">New!</a></h2>
+		<iframe src="new.html" height="200" width="100%" frameborder="0" scrolling="no"></iframe>
     </div>
-<!--     <div class="item">
-    	<img src="assets/images/features/03.png" alt="magnes" title="magnes by designova"/>
-        <div class="carousel-caption">
-          <h4>Web Apps</h4>
-          <p>Here we create some really cool stuff for web.next!</p>
-        </div>
+
+    <div class="item">
+		<h2 class="promo-smallheading add-top align-center pad-bottom color-high text-shadow-off" id="udpated_appsbutton"><a href="#">Recently Updated!</a></h2>
+		<iframe src="updated.html" height="200" width="100%" frameborder="0" scrolling="no"></iframe>
     </div>
- -->
+
+    <div class="item">
+		<h2 class="promo-smallheading add-top align-center pad-bottom color-high text-shadow-off" id="all_appsbutton"><a href="#">All!</a></h2>
+		<iframe src="apps_preview.html" height="200" width="100%" frameborder="0" scrolling="no"></iframe>
     </div>
+
+
+  </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
@@ -258,11 +267,10 @@
             
         </article>
         
-        
-        
+
         
          <article class="row add-top pad-top-medium">
-      	<h3 class="span6 offset3 promo-smallheading add-top align-center pad-bottom color-high text-shadow-off border-top border-bottom"><span class="promo-smallheading-alt color-dark highlight">Innovation:</span> we crave it like OXYGEN</h3>
+      	<h3 class="span6 offset3 promo-smallheading add-top align-center pad-bottom color-high text-shadow-off "><span class="promo-smallheading-alt color-dark highlight">Innovation:</span> we crave it like OXYGEN</h3>
         </article>
         
          <article class="row">
@@ -592,6 +600,79 @@
         });
         return false;
       });
+	
+	$('#all_appsbutton').click(function(){
+		$.fancybox({
+			'padding'		: 0,
+        	'hideOnContentClick': false, 
+        	'type':'iframe',
+			'href': 'apps.html',
+			'overlayOpacity' : 0,
+			'transitionIn'  : 'fade',
+            'transitionOut'  : 'fade',
+			'maxHeight' : 600,
+			'width': 1200,
+
+			
+		});
+		return false;
+		$.fancybox.close();
+	});
+
+	$('#new_appsbutton').click(function(){
+		$.fancybox({
+			'padding'		: 0,
+        	'hideOnContentClick': false, 
+        	'type':'iframe',
+			'href': 'new.html',
+			'overlayOpacity' : 0,
+			'transitionIn'  : 'fade',
+            'transitionOut'  : 'fade',
+			'maxHeight' : 600,
+			'width': 1200,
+
+			
+		});
+		return false;
+		$.fancybox.close();
+	});
+
+	$('#popular_appsbutton').click(function(){
+		$.fancybox({
+			'padding'		: 0,
+        	'hideOnContentClick': false, 
+        	'type':'iframe',
+			'href': 'popular.html',
+			'overlayOpacity' : 0,
+			'transitionIn'  : 'fade',
+            'transitionOut'  : 'fade',
+			'maxHeight' : 600,
+			'width': 1200,
+
+			
+		});
+		return false;
+		$.fancybox.close();
+	});
+
+	$('#udpated_appsbutton').click(function(){
+		$.fancybox({
+			'padding'		: 0,
+        	'hideOnContentClick': false, 
+        	'type':'iframe',
+			'href': 'updated.html',
+			'overlayOpacity' : 0,
+			'transitionIn'  : 'fade',
+            'transitionOut'  : 'fade',
+			'maxHeight' : 600,
+			'width': 1200,
+
+			
+		});
+		return false;
+		$.fancybox.close();
+	});
+
 
   </script>
   <script>

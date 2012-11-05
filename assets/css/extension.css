@@ -102,6 +102,7 @@ a img{
 .pad-right-extra-large { padding-right: 90px !important; }
 .pad-bottom-extra-large { padding-bottom: 90px !important; }
 .pad-bottom-extra-large-plus { padding-bottom: 120px !important; }
+.pad-top-works-lightbox {padding-top: 0px !important;}
 
 /*END*/
 

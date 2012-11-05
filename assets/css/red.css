@@ -12,6 +12,10 @@ a:hover{
 #parallax1 {position: fixed; z-index: -1; width: 100%; height: 100%; background: url(../images/backdrop3.png) repeat scroll 0 0 transparent;} 
 #parallax2 {position: fixed; z-index: -1; width: 100%; height: 100%; background:url(../images/dark-trans.png) repeat scroll 0 0 transparent;}
 
+#lbBody{
+	background:url(../images/dark-trans.png);
+}
+
 .section {
 	background:url(../images/white.png) repeat;
 }
@@ -231,8 +235,22 @@ text-transform:uppercase;
 }
 
 /*Works*/
+/*
 .overlay-block{display:none; z-index:9999; position: absolute; height: 180px; width: 211px; background:rgba(255,60,60,0.7) url(../images/zoom.png) no-repeat center center; text-align: center;}
+*/
+.overlay-block{display:none; z-index:9999; position: absolute; height: 80px; width: 80px; background:rgba(255,60,60,0.7) url(../images/zoom.png) no-repeat center center; text-align: center;}
 
+.overlay-text{
+	/* color: #222222; */
+	color:#111;
+	font-family:"liberation_Sans";
+	text-align: left;
+	text-shadow:none;
+	margin-top: 60px;
+}
+.box-link{
+	cursor:hand
+}
 /*Blog*/
 
 
