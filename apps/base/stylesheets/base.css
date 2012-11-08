@@ -82,12 +82,22 @@ section #pages {
 /*--------------------------------------------
 2. Header & Navigation
 ---------------------------------------------*/
+/*
 header {
 	background: #f6f6f6;
 	height: 58px;
 	border-bottom: 1px solid #eaeaea;
 	margin-bottom: 60px;
 }
+*/
+header {
+	background: #f6f6f6;
+	height: 58px;
+	border-bottom: 1px solid #eaeaea;
+	margin-bottom: 0px;
+}
+
+
 header .bsilogo{
 	margin-left: 0px;
 }
@@ -333,6 +343,31 @@ div.echo-nav {
 	}
 	div.echo-nav a:hover { background: #aaa; }
 	div.echo-nav a.active { background: #777; }
+	
+.breadcrumb {
+  margin: 0 0 50px;
+  list-style: none;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  *display: inline;
+  text-shadow: 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+
+.breadcrumb .divider {
+  padding: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumb .active {
+  color: #999999;
+}
+
 /*--------------------------------------------
 5. Team
 ---------------------------------------------*/

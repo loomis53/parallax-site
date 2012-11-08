@@ -1,0 +1,13 @@
+Welcome to the Bechtel Software, INC Application Catalogue!<br>
+This is where you'll find the complete registry of the BSI offerings along with:
+<li>Brief Description of the Application</li>
+<li>How to obtain the application</li>
+<li>Who to contact for help</li>
+<li>Latest and Greatest features</li>
+<br>
+Please feel free to let us know if you have any questions or feed back.  We are a very agile organization and can pivot very quickly!
+We are here to make your life easier!!
+<br>
+Thanks,
+Team BSI
+
