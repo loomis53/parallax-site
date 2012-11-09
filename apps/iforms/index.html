@@ -8,11 +8,14 @@
 	
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="../base/stylesheets/base.css" />
-	<link rel="stylesheet" type="text/css" href="../assets/css/extension.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/extension.css" />
 	<link rel="stylesheet" type="text/css" href="../base/stylesheets/media.queries.css" />
 	<link rel="stylesheet" type="text/css" href="../base/stylesheets/tipsy.css" />
+
 	<link rel="stylesheet" type="text/css" href="../base/javascripts/fancybox/jquery.fancybox-1.3.4.css" />
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Quicksand:400,700,300">
+	
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
 	
 	<!-- Javascripts -->
 	<script type="text/javascript" src="../base/javascripts/jquery-1.7.1.min.js"></script>
@@ -25,6 +28,11 @@
 	<script type="text/javascript" src="../base/javascripts/jquery.infieldlabel.js"></script>
 	<script type="text/javascript" src="../base/javascripts/jquery.echoslider.js"></script>
 	<script type="text/javascript" src="../base/javascripts/fluidapp.js"></script>
+	
+	<script type="text/javascript" src="../base/javascripts/jquery.autocomplete.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+
+
 
 	
 	<!-- Favicons -->
@@ -33,7 +41,27 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="../base/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="../base/images/apple-touch-icon-114x114.png">
 	
-
+	<script>
+    $(function() {
+        $( "#tags" ).autocomplete({
+            source: [
+	             { value: "gBETR", url: '../gbetr/' }, 
+	             { value: "iForms", url: '../iforms/' },
+	             { value: "Commodities", url: '../commodities/' },
+	             { value: "Towers", url: '../towers/' },
+	             { value: "xPPS", url: '../xpps/' },
+	             { value: "xSEC", url: '../xsec/' },
+	             { value: "PACT", url: '../pcat/' },
+				 { value: "Issue Tracker", url: "../issuetracker/"},
+				 { value: "iGlam", url: "../iglam/"},
+				 { value: "iContracts", url: "../icontracts"}
+			        ],
+			select: function (event, ui) {
+		            window.location = ui.item.url;
+		        }
+		    });
+        });
+    </script>
 	
 </head>
 <body>
@@ -42,7 +70,7 @@
 		
 	<!-- Start Header -->
 	<header>
-			<a href="../../../"><img align="left" class="bsilogo" src="../../../assets/images/bsi_caps_logo.png"></a>
+			<a href="../../../"><img align="left" class="bsilogo" src="../../assets/images/bsi_caps_logo.png"></a>	
 		<div class="container">
 
 
@@ -52,22 +80,39 @@
 				<ul>
 					<li><a href="#home">Home</a></li>
 					<li><a href="#team">Team</a></li>
-					<li><a href="#features">Features</a></li>
+					<li><a href="#apps">Apps</a></li>
 					<li><a href="#screenshots">Screenshots</a></li>
-					<li><a href="#tips">Tips and Tricks</a></li>
-					<li><a href="#updates">Release Notes</a></li>
+					<li><a href="https://appstore.mypsn.com">AppStore</a></li>
 				</ul>
 				<span class="arrow"></span>
+
+
+
+
+
+</div>
+
+				
 			</nav>
+
+
 			<!-- End Navigation -->
 		</div>
+		
+
+		
 	</header>
 	<!-- End Header -->
-	
 	<ul class="breadcrumb">
-		<li><a href="../../">BSI Home</a><span class="divider">></span></li>
-		<li><a href="../">App Catalogue</a><span class="divider">></span></li>
-		<li class="active">iForms</li>
+		<li class="text"><a href="../../">BSI Home</a><span class="divider">></span></li>
+		<li class="text"><a href="../">App Catalogue</a></li>
+		<li class="text active">iForms</li>
+			<li>
+			<form class="navbar-search">
+		    	<label for="tags"> </label>
+			    <input id="tags" class="search-query" type="text" placeholder="Search Apps">
+			</form>
+			</li>
 	</ul>
 	
 	<section class="container">
