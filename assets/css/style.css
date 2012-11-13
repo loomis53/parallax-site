@@ -18,9 +18,10 @@ a:hover{
 	text-decoration:none;
 }
 .section {
-	margin-bottom: 500px; 
+	/*margin-bottom: 500px; */ 
+	margin-bottom: 0px; 
 	position: relative;
-	box-shadow: 0 0px 12px rgba(0, 0, 0, 0.9);
+	/*box-shadow: 0 0px 12px rgba(0, 0, 0, 0.9); */
 }
 
 .page {
